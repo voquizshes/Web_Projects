@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Tic Tac Toe </title>
+        <style>
+            .board{
+                display: grid;
+                grid-template-columns: repeat(3, 100px);
+                grid-gap: 5px;
+                margin-top: 20px;
+
+                background-color: beige;
+                padding: 10px;
+                border-radius: 10px;
+            }
+            .cell {
+                width: 100px;
+                height: 100px;
+                font-size: 32px;
+                text-align: center;
+                vertical-align: middle;
+
+                background-color:bisque;
+                border-radius: 10px;
+            }
+            .cell:hover:not(.filled){
+                background-color: grey;
+                transform: scale(0.9);
+            }
+            .cell.filled{
+                background-color: rgb(131, 86, 18);
+            }
+            .main{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+            }
+            .UI{
+                display: grid;
+                grid-template-columns: repeat(3, 50px);
+                grid-gap: 5px;
+                margin-top: 20px;
+
+                background-color: beige;
+                padding: 10px;
+                border-radius: 10px;
+            }
+            .button{
+                font-size: x-small;
+                background-color: bisque;
+                border-radius: 10px;
+                border-width: 1px;
+            }
+            .button:hover{
+                background-color: grey;
+                transform: scale(0.9);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h2> TIC TAC TOE </h2>
+            <div class="board">
+               <div class="cell"></div>
+               <div class="cell"></div>
+               <div class="cell"></div>
+               <div class="cell"></div>
+               <div class="cell"></div>
+               <div class="cell"></div>
+               <div class="cell"></div>
+               <div class="cell"></div>
+               <div class="cell"></div>
+            </div>
+            <div class ="UI">
+                <button class="button", id = rstBut> Reset </button>
+                <button class="button"> CLICK ME </button>
+                <button class="button"> CLICK ME </button>
+            </div>
+        </div>
+
+        <script>
+            const resetBut = document.getElementById("rstBut");
+            const cells = document.querySelectorAll(".cell");
+            let currentPlayer = "X";
+
+            cells.forEach(cell => {
+                cell.addEventListener("click", () => {
+                    if (cell.textContent === ""){
+                        cell.textContent = currentPlayer;
+                        cell.classList.add("filled");
+                        if (Checkstate() == true)
+                        {
+                            alert(currentPlayer + " WINS!");
+                            ResetBoard();
+                        }
+                        else SwitchPlayer();
+                    };
+                })
+            });
+
+            resetBut.addEventListener("click", () => {
+                ResetBoard();
+            });
+
+            function Checkstate()
+            {
+                const winningPatterns = [ 
+                  [0, 1, 2],
+                  [3, 4, 5],
+                  [6, 7, 8],
+                  [0, 3, 6],
+                  [1, 4, 7],
+                  [2, 5, 8],
+                  [0, 4, 8],
+                  [6, 4, 2],
+                ];
+
+                for (let pattern of winningPatterns)
+                {
+                    const [a, b, c] = pattern
+                    if (cells[a].textContent === currentPlayer && 
+                        cells[b].textContent === currentPlayer && 
+                        cells[c].textContent === currentPlayer)
+                        {
+                            return true;
+                        }
+                }
+                return false
+            }
+
+            function SwitchPlayer()
+            {
+                if (currentPlayer === "X")
+                    {
+                       currentPlayer = "O";
+                    }
+               else
+                    {
+                       currentPlayer = "X";
+                    }
+            }
+
+            function ResetBoard()
+            {
+                cells.forEach(cell => {cell.textContent = ""});
+                cells.forEach(cell => {cell.classList.remove("filled")});
+            }
+        </script>
+    </body>
+</html>

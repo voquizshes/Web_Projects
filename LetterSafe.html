@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> find the secrets bee </title>
+    </head>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #main{
+            background-color: rgb(109, 109, 109);
+            display: flex;
+            width: 300px;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            border-radius: 4px;
+            border: 10px solid silver;
+        }
+        #clientInput{
+            all: unset;
+            background-color: rgb(214, 214, 214);
+            height: 50px;
+            width: 200px;
+            position: absolute;
+            top: 35%;
+            border-radius: 5px;
+            transition: transform 0.1s ease-in-out;
+            padding-left: 15px;
+        }
+        #sumbitBtn{
+            background-color: rgb(211, 211, 211);
+            height: 30px;
+            width: 220px;
+            position: absolute;
+            top: 80%;
+            border-radius: 10px;
+            text-align: center;
+            padding-top: 10px;
+            transition: transform 0.2s ease-out;
+        }
+        #header{
+            background-color: grey;
+            width: 500px;
+            height: 100px;
+            position: absolute;
+            top: -200px;
+
+            padding: 10px;
+            padding-top: 50px;
+            text-align: center;
+            font-size: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border: 10px solid silver;
+        }
+        #dropBox{
+            background-color: grey;
+            width: 460px;
+            height: 100px;
+            position: absolute;
+            top: 350px;
+            border: 10px solid silver;
+            z-index: 1;
+        }
+        #letter{
+            background-color: rgb(226, 226, 226);
+            height: 90px;
+            width: 190px;
+            position: absolute;
+            top: 350px;
+            z-index: 0;
+            font-size: 8px;
+            padding: 10px;
+            transition: transform 0.7s ease-in-out;
+        }
+        #letter.revealed{
+            transition: transform 0.5s ease-in-out;
+            transform: translate(0, 80px);
+        }
+        #letter.clicked{
+            transition: transform 0.7s ease-in-out;
+            transform: translate(0, 150px);
+        }
+        #letter.scale{
+            transition: transform 0.8s ease-in-out;
+            transform: translate(0, -270px) scale(4);
+        }
+        #rmvLetter{
+            background-color: rgb(124, 124, 124);
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            cursor: grab
+        }
+
+        #sumbitBtn:hover{
+            transition: transform 0.2s ease-in;
+            transform: scale(1.05) translateY(-5px);
+        }
+        #clientInput:hover{
+            transition: transform 0.2s ease-in-out;
+            transform: scale(1.05) translateY(-5px);
+        }
+        #letter:hover{
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <div id="main">
+            <div id="header"> Please enter the password </div>
+            <input id="clientInput"></input>
+            <div id="sumbitBtn"> SUMBIT </div>
+            <div id="dropBox"></div>
+            <div id="letter">
+                hello my name is ronald and im your babty so ghow are you
+                <div id="rmvLetter">></div>
+            </div>
+        </div>
+    </body>
+    <script>
+
+        let letter = document.getElementById("letter");
+        let step = 0;
+        let opened = false;
+
+        function animate()
+        {
+            letter.classList.add("revealed");
+        }
+
+        letter.addEventListener("click", () => {
+                if (opened == false){
+                    step = 1;
+                }else{
+                    step = 3;
+                    opened = false
+                };
+
+            if(step === 1)
+            {
+                letter.classList.add("clicked");
+                step = 2
+            }
+            
+            if(step === 3)
+            {
+                letter.classList.remove("scale")
+                step = 4
+            }
+        })
+
+        letter.addEventListener("transitionend", () =>{
+                if (step === 2)
+                {
+                    letter.classList.add("scale");
+                    letter.style.zIndex = 1;
+                    opened = true;
+                }
+                if(step === 4)
+                {
+                    letter.classList.remove("clicked")
+                    letter.style.zIndex = 0;
+                    step = 5
+                }
+                if(step === 5)
+                {
+                    letter.classList.remove("revealed")
+                    step = 0;
+                }     
+        })
+
+
+
+        function sumbit()
+        {
+            let userInput = document.getElementById("clientInput").value;
+            const codes = ["whataboutme", "sungitsungit", "iloveyou", "mahirapnasapasukan", "mamapapa", "111808", "anoto?", "aboutronald", "aboutmybabykat", "aboutthis", "webdevel"];
+            const message = [
+                "hello babyy gusto ko lang magtanong, nabobother kaba kapag di ako nakaka reply agad sayo or minsan late replies. genuinely just wanna know para iwasan koo. i love you babyy, i love u so much",
+                "hi babyy, i wanna know if theres something bothering u po, or if there's not, please tell me when there is. ill always hear u out po u know thatt. i just realized lately na kapag nabother ka about something or someone u just hide it po, and then avoid talking to me. i dont want that po. i love u always baby. so much, so so much",
+                "i jus wanna say, i love you. ill always love u po no matter what, lets spend more time getting to know each other plsss. like bruh di ko pa alam fav ulam mo, or like fav color mo. di pa tayo nakakapagusapan ng matagall, hope we can do that pag pasukan na. we can go on dates after school namann. if di ka kukunin ng friends mo.",
+                "Here i am, nagiisip kung anong mangyayari sa pasukan. what if may bago kanang gusto :((((. what if may magkagusto sayo, itapon mo sila bee, kahit principal payan. lugi pala sa principal. please dont leave me pag pasukann naa. kahit mabusy tayo sa schoolworks, wag mo naman ako kalimutannn. ill never not love u because im too busy or nag iistudy or what. i love u always po.",
+                "Welp nagiisip nanaman ako, iniimagine ko yung part na close na kami ng papa moo, then ng mama mo pag uwi nya. bruh ansaya, baka dyan nako palagi nakatambay. dyan narin ako makikikain BRUHHH SANAAAA NGAAA. baka payagan pa ko mag overnight dyan. nood lang tayo animeee ARGHHHH. sana talagaaaa, i love u beee",
+                "woah pano mo naisip ilagay birthday ko, anyways since antalino mo. isang kiss ka sakin, ss mo nalang to para masend ko sa rocket ko",
+                "well nagawa ko lang to kasi bored ako, but basically there is 10+ messages na naka tago here. u just need to put in the right password para makita lahat. and pinaghirapan ko yung messages ah. kaya dapat mabasa mo lahat. well para makakuha ka password, i dunnor maybe ibigay ko lang sayo daily or yun nalang reward ko pag nag pustahan tayo or smth HSADHASHDHADHA",
+                "umm dito nalang ako magrarant, anyways nung panahon na walakong phone. deppresed sad little shit ako, even though there was the computer it still lacked the basic things para magfunction ako. like bruh hirap hirapan para lang makachatt kaa, umiiyak ata ko non araw araw. kung ano ano iniisip ko SHADHASHD lol anyways little backstory nung wala kong phone.",
+                "hi kat, i loved u kasi, ikaw na yann bruhh. welp i mean type kita from head to toe, might seem weird, sue me. but bruh nagustuhan lang talaga kita nothing else. i like your friendliness(sometimes), your attitude(kahitmasamakangtao), and everything about you. naiiyak lang ako sa part na kaya mo kong iwasan ng sadya hays, anyways i love you so much po.",
+                "well ive taken a liking to web development, currently frontend palang alam ko(basic stuff basically), but still knowing how to do this is fucking amazing. im jumping in chair everytime i discover sometime new. (and also die whenever a problem pops up that i cant seem to know how to fucking fix). but hey part yun ng journey, continue mo using (webdevel) as a password.",
+                "anyways excited ako sa pasukan cus maybe advanced nako in a few classes meaning di ko kailangan mag study masyado. meaning more time for USSSSSSSSSSSSS lesgoooo, i can help u with ur studies po cus of the freetimee masaya saya toooo, i love you babyyyy."
+            ]
+            let pos = -1;
+            
+            for (const code of codes)
+            {
+                pos += 1;
+                if (userInput === code)
+                {
+                    document.getElementById("letter").textContent = message[pos]
+                    animate()
+                }
+            }
+        }
+
+        
+        document.getElementById("sumbitBtn").addEventListener("click", sumbit);
+    </script>
+</html>

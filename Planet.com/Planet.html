@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="Assets/Icon_Logo.png">
+            </div>
+            <h1 class="logo__title">Space.com</h1>
+        </div>
+    </nav>
+    <header>
+        <img src="Assets/Header_Backround.jpg">
+        <div class="container">
+            <h1>Space</h1>
+            <h3>Your one-stop site for discovering the planets of our Solar System.</h3>
+        </div>
+    </header>
+    <main>
+        <div class="container question">
+            <h1>What are planets?</h1>
+            <h3>Planets are large celestial bodies that orbit a star, like our Sun. They come in different sizes, colors, and compositions—some rocky, some made of gas—and each has its own unique features.</h3>
+        </div>
+        <div class="container planet">
+            <div class="planet">
+                <img src="Assets/Mercury.png">
+            </div>
+            <h1>Mercury</h1>
+            <h3 class="info">The smallest planet and closest to the Sun, with a rocky surface and extreme temperatures.</h3>
+        </div>
+        <div class="container planet">
+            <div class="planet">
+                <img src="Assets/Venus.png">
+            </div>
+            <h1>Venus</h1>
+            <h3 class="info">A hot, cloudy world known for its thick atmosphere and bright appearance in our sky.</h3>
+        </div>
+        <div class="container planet">
+            <div class="planet">
+                <img src="Assets/Earth.png">
+            </div>
+            <h1>Earth</h1>
+            <h3 class="info">Our home planet, the only known world with life, oceans, and diverse ecosystems.</h3>
+        </div>
+        <div class="container planet">
+            <div class="planet">
+                <img src="Assets/Mars.png">
+            </div>
+            <h1>Mars</h1>
+            <h3 class="info">The red planet, famous for its dusty surface, huge volcanoes, and the possibility of ancient water.</h3>
+        </div>
+        <div class="container planet">
+            <div class="planet">
+                <img src="Assets/Jupiter.png">
+            </div>
+            <h1>Jupiter</h1>
+            <h3 class="info">The largest planet, a gas giant with colorful storms, including the Great Red Spot.</h3>
+        </div>
+        <div class="container planet">
+            <div class="planet">
+                <img src="Assets/Saturn.png">
+            </div>
+            <h1>Saturn</h1>
+            <h3 class="info">A gas giant with stunning rings made of ice and rock, and dozens of moons.</h3>
+        </div>
+        <div class="container planet">
+            <div class="planet">
+                <img src="Assets/Uranus.png">
+            </div>
+            <h1>Uranus</h1>
+            <h3 class="info">An icy giant that spins on its side, with pale blue clouds and faint rings.</h3>
+        </div>
+        <div class="container planet">
+            <div class="planet">
+                <img src="Assets/Neptune.png">
+            </div>
+            <h1>Neptune</h1>
+            <h3 class="info">The farthest planet from the Sun, deep blue in color, with powerful winds and storms.</h3>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <img src="Assets/Icon_Logo.png" class="footer__logo">
+            <h2>Space.com</h2>
+            <h3>Your space needs all in one, satisfied</h3>
+        </div>
+        <div class="container">
+            <h2>Follow us!</h2>
+            <h3>Facebook</h3>
+            <h3>Instagram</h3>
+            <h3>Tiktok</h3>
+        </div>
+        <div class="container">
+            <h2>Help Center</h2>
+            <h3>FAQs</h3>
+            <h3>Terms And Service</h3>
+            <h3>Privacy Policy</h3>
+        </div>
+        <div class="container">
+            <h4>@ All Rights Reserved 2025</h4>
+        </div>
+    </footer>
+</body>
+<style>
+    body{
+        margin: 0;
+        font-family: sans-serif;
+        color: whitesmoke;
+    }
+    h1{
+        font-weight: 750;
+    }
+    h2{
+        margin-bottom: 7px;
+    }
+    h3{
+        margin: 0;
+        font-weight: 500;
+    }
+
+
+    nav{
+        background-color: black;
+        height: 70px;
+        position: sticky;
+        top: 0;
+        display: flex;
+        align-items: center;
+        z-index: 999;
+    }
+    nav .container{
+        height: 80%;
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .logo{
+        margin-left: 5px;
+        height: 50px;
+        width: 50px;
+    }
+    .logo img{
+        filter: invert();
+    }
+    .logo__title{
+        margin-left: 5px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+
+
+    header{
+        height: 600px;
+        position: relative;
+    }
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    header .container{
+        position: absolute;
+        min-width: 210px;
+        max-width: 320px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .container.question{
+        margin: 200px 50px;
+        margin-bottom: 350px;
+    }
+
+    main{
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    main .container{
+        margin: 50px;
+        text-align: center;
+    }
+    .container.planet{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+        margin-bottom: 150px;
+        position: relative;
+    }
+
+    footer{
+        background-color: rgb(26, 26, 26);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+    footer .container{
+        margin: 80px;
+    }
+    .footer__logo{
+        height: 100px;
+        width: 100px;
+        filter: invert();
+    }
+
+    @media (min-width: 768px) {
+        nav{
+            height: 100px;
+        }
+        header{
+            height: 1000px;
+        }
+        h1{
+            font-size: 5rem;
+        }
+        h2{
+            font-size: 3rem;
+        }
+        h3{
+            font-size: 2rem;
+        }
+        .container.question{
+            align-self: center;
+            margin: 400px 0px;
+            margin-bottom: 500px;
+            max-width: 700px;
+    }
+    }
+</style>
+<script>
+</script>
+</html>

@@ -1,2 +1,2 @@
 # Web_Projects
-my fun little web projects i made.
+Little projects i worked on

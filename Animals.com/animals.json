@@ -1,0 +1,452 @@
+[
+  {
+    "name": "Amur Leopard",
+    "type": "Fish",
+    "habitat": "Island",
+    "level": "Critically Endangered",
+    "description": "A rare leopard species native to the Russian Far East, known for its beautiful spotted coat.",
+    "fun_fact": "It can hold its breath for over 20 minutes.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Blue Whale",
+    "type": "Mammal",
+    "habitat": "River",
+    "level": "Critically Endangered",
+    "description": "The largest animal ever known to have lived on Earth, found in oceans worldwide.",
+    "fun_fact": "It uses its tail for balance while running.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Javan Rhino",
+    "type": "Amphibian",
+    "habitat": "River",
+    "level": "Vulnerable",
+    "description": "A shy and solitary rhino found only in small parts of Indonesia.",
+    "fun_fact": "It uses its tail for balance while running.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Hawksbill Turtle",
+    "type": "Amphibian",
+    "habitat": "Desert",
+    "level": "Critically Endangered",
+    "description": "A sea turtle famous for its narrow head and colorful shell.",
+    "fun_fact": "It can change color to blend into its surroundings.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Mountain Gorilla",
+    "type": "Bird",
+    "habitat": "Island",
+    "level": "Vulnerable",
+    "description": "A large primate that inhabits the forests of central Africa's mountains.",
+    "fun_fact": "It uses tools to find food.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Kakapo",
+    "type": "Fish",
+    "habitat": "Forest",
+    "level": "Vulnerable",
+    "description": "A flightless, nocturnal parrot endemic to New Zealand.",
+    "fun_fact": "It uses its tail for balance while running.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Vaquita",
+    "type": "Bird",
+    "habitat": "Wetland",
+    "level": "Endangered",
+    "description": "The world's rarest marine mammal, native to the Gulf of California.",
+    "fun_fact": "It can hold its breath for over 20 minutes.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Philippine Eagle",
+    "type": "Bird",
+    "habitat": "Forest",
+    "level": "Vulnerable",
+    "description": "One of the largest and most powerful eagles, found only in the Philippines.",
+    "fun_fact": "It sleeps up to 20 hours a day.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Snow Leopard",
+    "type": "Bird",
+    "habitat": "Forest",
+    "level": "Endangered",
+    "description": "A solitary big cat adapted to life in cold, mountainous regions of Asia.",
+    "fun_fact": "It can rotate its head almost 270 degrees.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Red Wolf",
+    "type": "Bird",
+    "habitat": "Mountain",
+    "level": "Vulnerable",
+    "description": "A rare, slender wolf once widespread across the southeastern U.S.",
+    "fun_fact": "It forms lifelong pairs.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Yangtze Giant Softshell Turtle",
+    "type": "Mammal",
+    "habitat": "Mountain",
+    "level": "Endangered",
+    "description": "A critically endangered freshwater turtle from China.",
+    "fun_fact": "Its call can be heard from miles away.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Indian Vulture",
+    "type": "Reptile",
+    "habitat": "Grassland",
+    "level": "Endangered",
+    "description": "A large bird of prey crucial to cleaning up carcasses in India.",
+    "fun_fact": "It sleeps up to 20 hours a day.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Addax",
+    "type": "Mammal",
+    "habitat": "Wetland",
+    "level": "Critically Endangered",
+    "description": "A desert antelope well-adapted to arid regions of the Sahara.",
+    "fun_fact": "It has a unique pattern that identifies individuals.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Saola",
+    "type": "Reptile",
+    "habitat": "River",
+    "level": "Critically Endangered",
+    "description": "An elusive, antelope-like animal native to the Annamite Mountains.",
+    "fun_fact": "It uses tools to find food.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Pangolin",
+    "type": "Reptile",
+    "habitat": "Wetland",
+    "level": "Endangered",
+    "description": "A scaly, insect-eating mammal found in Africa and Asia.",
+    "fun_fact": "It uses its tail for balance while running.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Gharial",
+    "type": "Reptile",
+    "habitat": "Marine",
+    "level": "Endangered",
+    "description": "A fish-eating crocodilian with a long, narrow snout native to India.",
+    "fun_fact": "It has a unique pattern that identifies individuals.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Bactrian Camel",
+    "type": "Fish",
+    "habitat": "Grassland",
+    "level": "Critically Endangered",
+    "description": "A double-humped camel adapted to cold deserts of Central Asia.",
+    "fun_fact": "It uses its tail for balance while running.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Iriomote Cat",
+    "type": "Mammal",
+    "habitat": "Marine",
+    "level": "Vulnerable",
+    "description": "A small wild cat found only on Japan\u2019s Iriomote Island.",
+    "fun_fact": "It can hold its breath for over 20 minutes.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Northern Bald Ibis",
+    "type": "Mammal",
+    "habitat": "Island",
+    "level": "Critically Endangered",
+    "description": "A striking bird with a bald head and curved bill, native to North Africa and the Middle East.",
+    "fun_fact": "It uses tools to find food.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Axolotl",
+    "type": "Amphibian",
+    "habitat": "Marine",
+    "level": "Endangered",
+    "description": "A permanently aquatic salamander native to Mexico.",
+    "fun_fact": "It can rotate its head almost 270 degrees.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Bonobo",
+    "type": "Reptile",
+    "habitat": "Desert",
+    "level": "Endangered",
+    "description": "A great ape closely related to chimpanzees, native to the Congo Basin.",
+    "fun_fact": "It can change color to blend into its surroundings.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "California Condor",
+    "type": "Mammal",
+    "habitat": "Grassland",
+    "level": "Critically Endangered",
+    "description": "North America's largest land bird, known for its massive wingspan.",
+    "fun_fact": "It forms lifelong pairs.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Chinese Giant Salamander",
+    "type": "Reptile",
+    "habitat": "Forest",
+    "level": "Vulnerable",
+    "description": "The largest amphibian in the world, native to Chinese rivers.",
+    "fun_fact": "It can leap over 6 meters in a single bound.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Dhole",
+    "type": "Mammal",
+    "habitat": "River",
+    "level": "Critically Endangered",
+    "description": "A wild dog species native to Asia, known for its whistling calls.",
+    "fun_fact": "It can leap over 6 meters in a single bound.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Dugong",
+    "type": "Fish",
+    "habitat": "Mountain",
+    "level": "Vulnerable",
+    "description": "A marine mammal related to manatees, found in warm coastal waters.",
+    "fun_fact": "It sleeps up to 20 hours a day.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Eastern Lowland Gorilla",
+    "type": "Fish",
+    "habitat": "Forest",
+    "level": "Vulnerable",
+    "description": "The largest subspecies of gorilla, native to the Democratic Republic of the Congo.",
+    "fun_fact": "It can hold its breath for over 20 minutes.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Gal\u00e1pagos Penguin",
+    "type": "Mammal",
+    "habitat": "Island",
+    "level": "Critically Endangered",
+    "description": "The only penguin species found north of the equator in the wild.",
+    "fun_fact": "It can leap over 6 meters in a single bound.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Giant Ibis",
+    "type": "Mammal",
+    "habitat": "River",
+    "level": "Critically Endangered",
+    "description": "Cambodia\u2019s national bird, known for its massive size and long beak.",
+    "fun_fact": "It uses its tail for balance while running.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Grevy's Zebra",
+    "type": "Amphibian",
+    "habitat": "Marine",
+    "level": "Vulnerable",
+    "description": "The largest and most endangered zebra species, native to Kenya and Ethiopia.",
+    "fun_fact": "It uses its tail for balance while running.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Hirola",
+    "type": "Amphibian",
+    "habitat": "Forest",
+    "level": "Vulnerable",
+    "description": "A critically endangered antelope found on the Kenya-Somalia border.",
+    "fun_fact": "It uses tools to find food.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Indus River Dolphin",
+    "type": "Fish",
+    "habitat": "Island",
+    "level": "Vulnerable",
+    "description": "A nearly blind freshwater dolphin found in Pakistan\u2019s rivers.",
+    "fun_fact": "It sleeps up to 20 hours a day.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Irrawaddy Dolphin",
+    "type": "Fish",
+    "habitat": "River",
+    "level": "Critically Endangered",
+    "description": "A freshwater dolphin known for its rounded forehead, found in Southeast Asia.",
+    "fun_fact": "Its call can be heard from miles away.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Malayan Tiger",
+    "type": "Reptile",
+    "habitat": "Forest",
+    "level": "Critically Endangered",
+    "description": "A tiger subspecies native to the Malay Peninsula.",
+    "fun_fact": "It can change color to blend into its surroundings.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Markhor",
+    "type": "Mammal",
+    "habitat": "Mountain",
+    "level": "Critically Endangered",
+    "description": "A large wild goat with twisted horns, found in Central Asia.",
+    "fun_fact": "It can leap over 6 meters in a single bound.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Narwhal",
+    "type": "Mammal",
+    "habitat": "River",
+    "level": "Vulnerable",
+    "description": "A marine mammal famous for its long, spiral tusk.",
+    "fun_fact": "It can change color to blend into its surroundings.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Okapi",
+    "type": "Amphibian",
+    "habitat": "Marine",
+    "level": "Critically Endangered",
+    "description": "A forest-dwelling relative of the giraffe, native to the Congo.",
+    "fun_fact": "It can change color to blend into its surroundings.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Orangutan",
+    "type": "Reptile",
+    "habitat": "Island",
+    "level": "Critically Endangered",
+    "description": "A great ape known for its intelligence and tree-dwelling lifestyle.",
+    "fun_fact": "It can hold its breath for over 20 minutes.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Pygmy Hippopotamus",
+    "type": "Amphibian",
+    "habitat": "Marine",
+    "level": "Endangered",
+    "description": "A small, forest-dwelling relative of the common hippo.",
+    "fun_fact": "It can hold its breath for over 20 minutes.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Riverine Rabbit",
+    "type": "Reptile",
+    "habitat": "Wetland",
+    "level": "Endangered",
+    "description": "A rare rabbit species found along South Africa\u2019s rivers.",
+    "fun_fact": "It forms lifelong pairs.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Siberian Crane",
+    "type": "Fish",
+    "habitat": "Mountain",
+    "level": "Endangered",
+    "description": "A large white crane that breeds in Siberia and winters in China and Iran.",
+    "fun_fact": "It has a unique pattern that identifies individuals.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Spoon-billed Sandpiper",
+    "type": "Reptile",
+    "habitat": "Grassland",
+    "level": "Vulnerable",
+    "description": "A small shorebird with a distinctive spoon-shaped bill.",
+    "fun_fact": "It uses its tail for balance while running.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Sri Lankan Elephant",
+    "type": "Amphibian",
+    "habitat": "Mountain",
+    "level": "Critically Endangered",
+    "description": "A subspecies of the Asian elephant, native to Sri Lanka.",
+    "fun_fact": "It uses tools to find food.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Sumatran Elephant",
+    "type": "Reptile",
+    "habitat": "Island",
+    "level": "Vulnerable",
+    "description": "A small, endangered subspecies of Asian elephant found in Sumatra.",
+    "fun_fact": "Its call can be heard from miles away.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Sumatran Orangutan",
+    "type": "Bird",
+    "habitat": "Desert",
+    "level": "Endangered",
+    "description": "A critically endangered great ape found only on Sumatra.",
+    "fun_fact": "It sleeps up to 20 hours a day.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Sumatran Rhino",
+    "type": "Fish",
+    "habitat": "River",
+    "level": "Vulnerable",
+    "description": "The smallest and hairiest of all rhinos, native to Sumatra.",
+    "fun_fact": "It has a unique pattern that identifies individuals.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Sumatran Tiger",
+    "type": "Fish",
+    "habitat": "Marine",
+    "level": "Vulnerable",
+    "description": "The smallest tiger subspecies, found only on Sumatra.",
+    "fun_fact": "Its call can be heard from miles away.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Tapanuli Orangutan",
+    "type": "Mammal",
+    "habitat": "Marine",
+    "level": "Vulnerable",
+    "description": "The rarest great ape species, native to northern Sumatra.",
+    "fun_fact": "It can rotate its head almost 270 degrees.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Western Chimpanzee",
+    "type": "Amphibian",
+    "habitat": "Grassland",
+    "level": "Critically Endangered",
+    "description": "A critically endangered chimpanzee subspecies found in West Africa.",
+    "fun_fact": "It uses tools to find food.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Yangtze Finless Porpoise",
+    "type": "Fish",
+    "habitat": "River",
+    "level": "Critically Endangered",
+    "description": "A freshwater porpoise native to China\u2019s Yangtze River.",
+    "fun_fact": "It can rotate its head almost 270 degrees.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  },
+  {
+    "name": "Amur Leopard",
+    "type": "Reptile",
+    "habitat": "Island",
+    "level": "Vulnerable",
+    "description": "A rare leopard species native to the Russian Far East, known for its beautiful spotted coat.",
+    "fun_fact": "It forms lifelong pairs.",
+    "image": "Assets/Pictures/Animal_Placeholder.jpg"
+  }
+]

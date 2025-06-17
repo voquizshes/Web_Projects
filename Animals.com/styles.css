@@ -1,0 +1,211 @@
+:root {
+    /* 🎨 Colors */
+    --color-primary: #0f0f0f;      /* Black */
+    --color-secondary: #555555;    /* Dark gray for subtle accents */
+    --color-background: #ffffff;   /* White background */
+
+    --color-surface: #f9f9f9;      /* Light gray for cards / surfaces */
+
+    --color-text: #f1f1f1;         /* Main text */
+    --color-muted: #777777;        /* Muted text for secondary info */
+    --color-border: #e0e0e0;       /* Soft border */
+  
+    /* 🔠 Typography (rem-based) */
+    --font-family-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --font-size-base: 1rem;        /* ~16px default */
+    --font-size-sm: 0.875rem;      /* ~14px */
+    --font-size-lg: 1.25rem;       /* ~20px */
+    --font-size-xl: 1.5rem;        /* ~24px */
+
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+  
+    /* 📏 Spacing */
+    --spacing-xs: 0.25rem;         /* 4px */
+    --spacing-sm: 0.5rem;          /* 8px */
+    --spacing-md: 1rem;            /* 16px */
+    --spacing-lg: 1.5rem;          /* 24px */
+    --spacing-xl: 2rem;            /* 32px */
+    --spacing-xxl: 3rem;
+  
+    /* 🟦 Border radius + shadow */
+    --radius: 0.5rem;              /* 8px */
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+*{
+    font-family: var(--font-family-base);
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+footer{
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+}
+footer section{
+    margin: unset;
+}
+footer section img{
+    height: 50px;
+    filter: invert();
+}
+header{
+    position: relative;
+}
+
+nav{
+    background-color: var(--color-background);
+    display: flex;
+    height: 70px;
+    padding: var(--spacing-xs);
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+nav .logo_title{
+    display: flex;
+    align-items: center;
+}
+nav .logo_img{
+    all: unset;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section{
+    padding: var(--spacing-md);
+    text-align: center;
+    margin: var(--spacing-xl);
+}
+
+.search fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+.search label{
+    display: flex;
+    gap: var(--spacing-xs);
+}
+.search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+.searchName{
+    width: 100%;
+    height: 30px;
+}
+.search legend{
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+}
+
+.animal_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--spacing-sm);
+    max-width: 500px;
+}
+.animal_card{
+    background-color: var(--color-surface);
+    border: black solid 1px;
+    max-width: 160px;
+    padding: var(--spacing-sm);
+    border-radius: var(--radius);
+}
+.animal_img{
+    height: unset;
+    border-radius: var(--radius);
+}
+.animal_info{
+    display: flex;
+    height: 20px;
+    margin-top: var(--spacing-sm);
+}
+.featured{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button{
+    all: unset;
+    border: solid black 2px;
+    text-align: center;
+    border-radius: var(--radius);
+    font-weight: var(--font-weight-bold);
+    width: 100px;
+    height: 30px;
+    align-self: center;
+    background-color: unset;
+}
+
+.slideUp{
+    animation: slideUpAnimation both;
+    animation-timeline: view(50% 5%);
+}
+@keyframes slideUpAnimation{
+    from{
+        opacity: 0;
+        transform: translate(0, 200px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+.popIn{
+    animation: popInAnimation 2s;
+}
+@keyframes popInAnimation{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    header{
+        height: 100vh;
+        width: 100%;
+    }
+    header .backround{
+        object-fit: cover;
+    }
+    header .animal_card{
+        max-width: 300px;
+    }
+    header .animal_info{
+        min-height: 30px;
+    }
+    section.animal_container{
+        max-width: 1100px;
+        grid-auto-columns: auto;
+    }
+}

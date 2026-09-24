@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I Love You Ash</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        margin: 0;
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background:
+            linear-gradient(
+                135deg,
+                #fff0f7,
+                #ffd6e9 50%,
+                #fce8f3
+            );
+
+        font-family:
+            "Trebuchet MS",
+            Arial,
+            sans-serif;
+    }
+
+
+    /* =========================
+       MAIN CONTAINER
+    ========================= */
+
+    #main {
+        background: #fff7fb;
+
+        width: min(300px, 86vw);
+        height: min(300px, 86vw);
+
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 25px;
+        border: 3px solid #f3a8c8;
+
+        box-shadow:
+            0 14px 35px
+            rgba(214, 103, 153, .20);
+    }
+
+
+    /* =========================
+       DECORATIVE HEARTS
+    ========================= */
+
+    #main:before,
+    #main:after {
+        position: absolute;
+
+        color: #f09abd;
+        font-size: 19px;
+
+        pointer-events: none;
+    }
+
+    #main:before {
+        content: "♡";
+        top: 10px;
+        left: 15px;
+    }
+
+    #main:after {
+        content: "♡";
+        bottom: 10px;
+        right: 15px;
+    }
+
+
+    /* =========================
+       TITLE
+    ========================= */
+
+    #header {
+        background: #ffd9e9;
+
+        width: min(360px, 86vw);
+        height: 58px;
+
+        position: absolute;
+
+        top: -78px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 5px 10px;
+
+        text-align: center;
+
+        font-size: clamp(19px, 6vw, 25px);
+        font-weight: bold;
+
+        color: #a94f77;
+
+        border:
+            3px solid #f3a8c8;
+
+        border-radius: 20px;
+
+        box-shadow:
+            0 8px 20px
+            rgba(214, 103, 153, .12);
+    }
+
+
+    /* =========================
+       INPUT
+    ========================= */
+
+    #clientInput {
+        all: unset;
+
+        background: #fff;
+
+        height: 46px;
+        width: min(200px, 65vw);
+
+        position: absolute;
+
+        top: 34%;
+
+        border-radius: 14px;
+        border: 2px solid #f4b5d0;
+
+        padding: 0 14px;
+
+        color: #9b5275;
+
+        font-size: 14px;
+
+        box-shadow:
+            0 5px 12px
+            rgba(220, 120, 165, .10);
+
+        transition:
+            transform .2s ease-in-out;
+    }
+
+    #clientInput::placeholder {
+        color: #d79ab6;
+    }
+
+    #clientInput:hover {
+        transform:
+            scale(1.03)
+            translateY(-3px);
+    }
+
+
+    /* =========================
+       SUBMIT BUTTON
+    ========================= */
+
+    #sumbitBtn {
+        background: #f5a9ca;
+        color: white;
+
+        height: 38px;
+        width: min(200px, 65vw);
+
+        position: absolute;
+
+        top: 74%;
+
+        border-radius: 16px;
+
+        text-align: center;
+
+        padding-top: 10px;
+
+        font-size: 13px;
+        font-weight: bold;
+
+        letter-spacing: 1px;
+
+        cursor: pointer;
+
+        box-shadow:
+            0 5px 10px
+            rgba(220, 110, 160, .18);
+
+        transition:
+            transform .2s ease-out;
+    }
+
+    #sumbitBtn:hover {
+        transform:
+            scale(1.04)
+            translateY(-3px);
+    }
+
+
+    /* =========================
+       DROP BOX
+    ========================= */
+
+    #dropBox {
+        background: #ffe0ec;
+
+        width: min(235px, 72vw);
+        height: 85px;
+
+        position: absolute;
+
+        top: 320px;
+
+        border:
+            3px dashed #f2a3c5;
+
+        border-radius: 20px;
+
+        z-index: 1;
+    }
+
+
+    /* =========================
+       LETTER
+       FIXED SIZE + SCROLLABLE
+    ========================= */
+
+    #letter {
+        background: #fff;
+
+        color: #9b5275;
+
+        width: 175px;
+        height: 85px;
+
+        position: absolute;
+
+        top: 320px;
+
+        z-index: 0;
+
+        font-size: 8px;
+        line-height: 1.3;
+
+        padding:
+            2px 9px 2px;
+
+        border:
+            2px solid #f4b5d0;
+
+        border-radius: 13px;
+
+        box-shadow:
+            0 7px 16px
+            rgba(200, 90, 140, .14);
+
+        transition:
+            transform .7s ease-in-out;
+
+        /*
+           The letter NEVER grows.
+           Long messages scroll instead.
+        */
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+
+        scrollbar-width: thin;
+    }
+
+
+    /* =========================
+       LETTER REVEAL
+    ========================= */
+
+    #letter.revealed {
+        transition:
+            transform .5s ease-in-out;
+
+        transform:
+            translate(0, 70px);
+    }
+
+
+    /* =========================
+       LETTER CLICK
+    ========================= */
+
+    #letter.clicked {
+        transition:
+            transform .7s ease-in-out;
+
+        transform:
+            translate(0, 130px);
+    }
+
+
+    /* =========================
+       OPENED LETTER
+    ========================= */
+
+    #letter.scale {
+        transition:
+            transform .8s ease-in-out;
+
+        transform:
+            translate(
+                0,
+                -245px
+            )
+            scale(1.9);
+    }
+
+
+    /* =========================
+       LETTER TEXT
+    ========================= */
+
+    #letterText {
+        width: 100%;
+        backround-color: red;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 380px) {
+
+        #main {
+            width: 84vw;
+            height: 84vw;
+
+            max-width: 300px;
+            max-height: 300px;
+        }
+
+
+        #header {
+            width: 82vw;
+            max-width: 330px;
+
+            height: 52px;
+
+            top: -68px;
+
+            font-size: 19px;
+        }
+
+
+        #clientInput,
+        #sumbitBtn {
+            width: 64vw;
+            max-width: 200px;
+        }
+
+
+        #dropBox {
+            width: 70vw;
+            max-width: 235px;
+        }
+
+
+        #letter {
+            width: 165px;
+            height: 80px;
+
+            font-size: 7.5px;
+        }
+
+
+        #letter.scale {
+            transform:
+                translate(
+                    0,
+                    -205px
+                )
+                scale(1.7);
+        }
+    }
+
+
+    /* =========================
+       VERY SMALL PHONES
+    ========================= */
+
+    @media (max-width: 320px) {
+
+        #main {
+            width: 82vw;
+            height: 82vw;
+        }
+
+
+        #header {
+            width: 80vw;
+
+            height: 48px;
+
+            top: -62px;
+
+            font-size: 17px;
+        }
+
+
+        #clientInput,
+        #sumbitBtn {
+            width: 62vw;
+        }
+
+
+        #dropBox {
+            width: 68vw;
+        }
+
+
+        #letter {
+            width: 155px;
+            height: 75px;
+
+            font-size: 7px;
+        }
+
+
+        #letter.scale {
+            transform:
+                translate(
+                    0,
+                    -185px
+                )
+                scale(1.6);
+        }
+    }
+
+    </style>
+</head>
+
+
+<body>
+
+    <div id="main">
+
+        <div id="header">
+            I Love You Ash
+        </div>
+
+
+        <input
+            id="clientInput"
+            placeholder="Enter a code"
+            autocomplete="off"
+        >
+
+
+        <div id="sumbitBtn">
+            Submit
+        </div>
+
+
+        <div id="dropBox"></div>
+
+
+        <div id="letter">
+
+            <div id="letterText"></div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+    /* =========================
+       VARIABLES
+    ========================= */
+
+    let letter =
+        document.getElementById("letter");
+
+    let step = 0;
+
+    let opened = false;
+
+
+    /* =========================
+       CODES
+    ========================= */
+
+    const codes = [
+
+        "Reaction Focus",
+
+        "No Defense",
+
+        "Again Failed",
+
+        "Ex Friend",
+
+        "Consider First",
+
+        "Missed Effort",
+
+        "Progress Taken",
+
+        "Low Appreciation",
+
+        "One Sided",
+
+        "Not Valued",
+
+        "Different Conflict",
+
+        "Final Promise"
+
+    ];
+
+
+    /* =========================
+       MESSAGES
+    ========================= */
+
+    const messages = [
+
+`I'm sorry that when you reacted strongly after an argument, I ended up focusing more on your reaction than on what I did to hurt you. I know I did acknowledge my mistake and apologized, but I understand that sometimes my actions afterward made it feel like your reaction became the main issue. I should have taken more time to understand why you were hurt and made sure you felt heard before talking about anything else. I'm sorry for making you feel like your pain was being pushed aside.`,
+
+
+`I'm sorry that I didn't defend you when you needed me to, especially when the situation involved my exes. You deserved to feel like I was on your side, and I failed to show you that. I understand why that hurt you and why it made you question whether I would stand up for you when it mattered. I can't change what I did, but I can learn from it and make sure I don't stay silent when I should be supporting you.`,
+
+
+`I'm especially sorry that I had another chance to do better and still failed to defend you. I understand why this hurt more than the first time because it probably felt like I hadn't actually learned from what happened before. You shouldn't have to keep experiencing the same hurt before I understand how important something is to you. I'm sorry for not doing better when I already knew how much it mattered.`,
+
+
+`I'm sorry for asking you for permission to come with me to the café when I knew the person I was meeting was a friend of my ex. Looking back, I understand why that situation could have made you uncomfortable, and I should have thought about that before putting you in that position. I don't want you to feel like I only consider your feelings after you've already been hurt. I should have considered how the situation looked and how it could make you feel beforehand.`,
+
+
+`I'm sorry that I haven't always stopped and thought about how my actions could affect you before doing something. We've talked before about thinking about the other person before acting, and I know I haven't always lived up to that. I don't want my intention to become an excuse for the effect my actions have on you. I want to become someone who considers you before making decisions, not someone who only understands after something goes wrong.`,
+
+
+`I'm sorry that I haven't thanked you or acknowledged you enough for the effort you've been putting into changing and working on yourself. I know change isn't easy, especially when you're trying to break habits that you've had for a long time. I should have noticed your effort more instead of only noticing the moments when things still went wrong. Your progress deserves to be acknowledged, and I'm sorry I haven't made you feel like I see it.`,
+
+
+`I'm sorry if I've made you feel like your efforts don't matter because I sometimes focus too much on what still needs to improve. I know you've been trying, and I don't want your mistakes to erase the progress you've made. I should be able to recognize both things, what still needs work and how hard you're trying to improve. I don't want you to feel like nothing you do is ever enough for me.`,
+
+
+`I'm sorry for not showing you enough appreciation for the things you do for me and for our relationship. There are probably many things you've done that I noticed but didn't properly acknowledge, and I realize that simply noticing them isn't enough if I never express it. I want you to know that I do see your efforts, even if I haven't always been good at showing you that I do.`,
+
+
+`I'm sorry if I've ever made you feel like you're the only one who needs to work on yourself for this relationship to become healthier. That's not fair to you. I have my own mistakes, habits, and shortcomings that I need to work on too. I don't want our relationship to become one where I'm constantly pointing out what you need to change while ignoring what I need to change myself. I want us both to grow, and I need to hold myself accountable too.`,
+
+
+`I'm sorry that I haven't always made you feel appreciated and valued. You deserve to know when I notice the things you do, the effort you make, and the ways you try to be better for us. I don't want you to only hear from me when something is wrong. I want you to hear from me when I'm grateful for you too.`,
+
+
+`I'm sorry for making our differences in how we handle conflict feel like something that was wrong with you. I'm used to a kind of love where problems are talked about calmly and vulnerably, without arguments becoming so intense, and because that's what I'm familiar with, I sometimes expect our relationship to work the same way.
+
+I realize now that you aren't me, and you don't process emotions the same way I do. I shouldn't have assumed that being vulnerable and calmly talking about your feelings would be easy for you just because that's what feels natural to me. You told me that being vulnerable is difficult for you, and I should have taken that more seriously instead of expecting you to communicate exactly the way I would.
+
+I'm sorry if I've made you feel like your way of expressing yourself is automatically wrong just because it's different from what I'm used to. I want to understand where you're coming from instead of constantly comparing your way of handling things to what I've experienced before.
+
+At the same time, I hope we can eventually find a way of arguing that works for both of us, where you can express what you're feeling without feeling forced to open up before you're ready, and where I can still feel safe and comfortable during difficult conversations.
+
+I don't expect you to suddenly become the way I am, and I don't want to become someone who ignores my own feelings just to accommodate you. I want us to meet somewhere in the middle and learn how to communicate in a way that respects both of us.
+
+I'm sorry for not understanding that sooner.`,
+
+
+`I don't want this apology to just be a collection of words that I say because you asked me to apologize. I genuinely want to understand the ways I've hurt you and take responsibility for them.
+
+I know saying sorry doesn't automatically fix everything. What matters more is whether I actually change the way I act afterward.
+
+I don't expect you to immediately forget everything or trust that I'll change just because I said these things. I want to show you through my actions.
+
+I also don't want to make your efforts to change invisible. I know you have your own struggles and things you're trying to work on, and I should have acknowledged your progress more instead of making you feel like I only see your mistakes.
+
+I love and care about you, and I don't want us to keep hurting each other over the same things.
+
+I want to learn how to understand you better, think about you before I act, support you when you need me, and take responsibility when I'm the one who caused the hurt.
+
+I'm sorry for the times I failed you. I'm sorry for the times I made you feel unsupported, unheard, or unappreciated. And I'm sorry that sometimes I understood what I did only after you'd already been hurt by it. I want to do better, not just say that I will.`
+
+    ];
+
+
+    /* =========================
+       REVEAL
+    ========================= */
+
+    function animate() {
+
+        letter.classList.add("revealed");
+
+    }
+
+
+    /* =========================
+       LETTER CLICK
+    ========================= */
+
+    letter.addEventListener(
+        "click",
+        () => {
+
+            if (opened === false) {
+
+                step = 1;
+
+            } else {
+
+                step = 3;
+                opened = false;
+
+            }
+
+
+            if (step === 1) {
+
+                letter.classList.add(
+                    "clicked"
+                );
+
+                step = 2;
+
+            }
+
+
+            if (step === 3) {
+
+                letter.classList.remove(
+                    "scale"
+                );
+
+                step = 4;
+
+            }
+
+        }
+    );
+
+
+    /* =========================
+       ANIMATION END
+    ========================= */
+
+    letter.addEventListener(
+        "transitionend",
+        () => {
+
+            if (step === 2) {
+
+                letter.classList.add(
+                    "scale"
+                );
+
+                letter.style.zIndex = 2;
+
+                opened = true;
+
+            }
+
+
+            if (step === 4) {
+
+                letter.classList.remove(
+                    "clicked"
+                );
+
+                letter.style.zIndex = 0;
+
+                step = 5;
+
+            }
+
+
+            if (step === 5) {
+
+                letter.classList.remove(
+                    "revealed"
+                );
+
+                step = 0;
+
+            }
+
+        }
+    );
+
+
+    /* =========================
+       SUBMIT
+    ========================= */
+
+    function submit() {
+
+        const userInput =
+            document
+                .getElementById("clientInput")
+                .value
+                .trim();
+
+
+        const pos =
+            codes.indexOf(userInput);
+
+
+        if (pos !== -1) {
+
+            document
+    .getElementById("letterText")
+    .textContent =
+    messages[pos].trim();
+
+
+            /*
+               Reset previous animation.
+            */
+
+            letter.classList.remove(
+                "scale",
+                "clicked",
+                "revealed"
+            );
+
+            letter.style.zIndex = 0;
+
+            letter.scrollTop = 0;
+
+            opened = false;
+
+            step = 0;
+
+
+            /*
+               Reveal the new letter.
+            */
+
+            setTimeout(
+                () => {
+
+                    animate();
+
+                },
+                50
+            );
+
+        }
+
+    }
+
+
+    /* =========================
+       SUBMIT BUTTON
+    ========================= */
+
+    document
+        .getElementById("sumbitBtn")
+        .addEventListener(
+            "click",
+            submit
+        );
+
+
+    /* =========================
+       ENTER KEY
+    ========================= */
+
+    document
+        .getElementById("clientInput")
+        .addEventListener(
+            "keydown",
+            (event) => {
+
+                if (event.key === "Enter") {
+
+                    submit();
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
